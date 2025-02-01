@@ -12,3 +12,12 @@ Route::post('/updateStudentsPage/{students}/edit', [StudentsController::class, '
 Route::delete('/studentsTable/{students}/delete', [StudentsController::class,'delete'])->name('delete');
 Route::put('/studentsTable', [StudentsController::class,'update'])->name('update');
 
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+// Route::get('/', function () {
+//     return view('home');
+// });

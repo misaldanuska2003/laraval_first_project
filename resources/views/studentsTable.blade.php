@@ -8,9 +8,9 @@
     
 </head>
 <body>
-    
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <x-layout></x-layout>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg gap-4">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 gap-3">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
@@ -24,6 +24,9 @@
                 </th>
                 <th scope="col" class="px-6 py-3">
                     email
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
