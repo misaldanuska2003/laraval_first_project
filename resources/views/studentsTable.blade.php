@@ -50,6 +50,11 @@
                 <td class="px-6 py-4">
                     {{$student->email}}
                 </td>
+                    
+                <div class="px-6 py-4">
+                <img src="{{ asset( 'photos/' . $student->photos) }}" class="img-photo" alt="Student Photo" style="width: 100px; height: auto;">
+                </div>
+
                 <td class="px-6 py-4">
                     <form action="{{route('edit',[$student])}} " method="post">
                     @csrf 

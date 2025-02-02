@@ -12,7 +12,10 @@ class StudentsController extends Controller
         $validates=$request->validate([ 
             'name'=>'required|string',
             'age'=>'required|integer',
-            'email'=>'required|string',]); 
+            'email'=>'required|string',
+            'photos'=>'required|image']);
+            
+            $request->file('photos')->move(public_path('photos'), $request->file('photos')->getClientOriginalName());
 
             Students::create($validates);
             return redirect('/studentsTable');

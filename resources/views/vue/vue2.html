@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue@3"></script> <!-- Include Vue.js library -->
+
+    <style>
+      
+
+        .btn-primary{
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <button class="{{buttonClasses}} " v-on:click="toggle"> click </button>
+    </div>
+    
+
+    <script>
+        Vue.creteApp({
+            data(){
+                return{
+                    buttonClasses: 'btn btn-primary',
+                    active:true
+                };
+            },
+            
+            method: {
+                toggle(){
+                    this.buttonClasses='text-red';
+                }
+            }
+        }).mount('#app');
+    </script>
+    
+</body>
+</html>
