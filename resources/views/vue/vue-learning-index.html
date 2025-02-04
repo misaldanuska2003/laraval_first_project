@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script> <!-- Include Vue.js library -->
+<style>
+    html,body{
+        height: 100%;
+    }
+    body{
+        display: grid;
+        place-items: center;
+    }
+    .text-red{
+        color: red;
+    }
+    .text-green{
+        color: green;
+    }
+</style>
+
 </head>
 <body>
 
@@ -15,9 +31,17 @@
 </p>
 
     {{ greeting }}.({{greeting.length}})
+
+    
+        <button :class="buttonClasses">click me</button>
+ 
+
 </div>
 
 <script>
+
+
+
     Vue.createApp({
         data(){
             return {
@@ -30,7 +54,13 @@
                 this.greeting='Hello Vue.js';
             },6000);
             
+        },
+        data1(){
+            return{
+                buttonClasses:'text-green'    
+            }
         }
+
     }).mount('#app');
 </script>
 
